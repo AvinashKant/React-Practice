@@ -1,4 +1,4 @@
-import './assets/css/app.css'
+import './../assets/css/app.css'
 
 function Dashboard() {
 
@@ -9,4 +9,4 @@ function Dashboard() {
   )
 }
 
-export default App
+export default Dashboard
