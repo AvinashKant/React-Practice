@@ -1,9 +1,12 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Dashboard from './pages/Dashboard.jsx'
+import { RouterProvider } from "react-router";
+import '../src/assets/css/app.css';
+import router from './routes';
+import { Provider } from 'react-redux';
+import store from './store';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Dashboard />
-  </StrictMode>,
+  <Provider store={store}>
+    <RouterProvider router={router} />,
+  </Provider>,
 )
