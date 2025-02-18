@@ -6,6 +6,14 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getChart, getSummary, getTransactions } from '../store/action';
 
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
 // Loader Component
 const Loader = () => (
   <div className="flex justify-center items-center">
@@ -28,9 +36,19 @@ export default function Dashboard() {
   const [type, setType] = useState(1);
   const { transaction, summary, isLoaderOn, chart } = useSelector((store) => store.dashboard || {});
 
-  useEffect(() => {
-    dispatch(getTransactions(type));
-  }, [type]);
+    // Access the client
+    const queryClient = useQueryClient()
+
+    // Queries
+     const query = useQuery({
+      queryKey: ['transactions', type],
+      queryFn: (type) => {
+        console.log("type", );
+         dispatch(getTransactions(type.queryKey[1]));
+      },
+      staleTime: 20 * 1000,
+      gcTime: 10 * 1000,
+    })
 
   useEffect(() => {
     dispatch(getSummary());
