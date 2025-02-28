@@ -6,6 +6,7 @@ import ErrorPage from "./components/Error/ErrorPage";
  * Public Routes
  */
 import Login from "./pages/Login";
+import TrafficLight from "./pages/TrafficLight";
 import Registration from "./pages/Registration";
 import ForgetPassword from "./pages/ForgetPassword";
 
@@ -27,6 +28,10 @@ const publicRoutes = [
     path: "forget-password",
     element: <ForgetPassword />,
   },
+  {
+    path: "traffic-light",
+    element: <TrafficLight />,
+  }
 ];
 
 let protectedRoutes = [...DashboardRoute.children];
