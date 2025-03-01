@@ -7,6 +7,7 @@ import ErrorPage from "./components/Error/ErrorPage";
  */
 import Login from "./pages/Login";
 import TrafficLight from "./pages/TrafficLight";
+import NxN from "./pages/NxN";
 import Registration from "./pages/Registration";
 import ForgetPassword from "./pages/ForgetPassword";
 
@@ -31,6 +32,10 @@ const publicRoutes = [
   {
     path: "traffic-light",
     element: <TrafficLight />,
+  },
+  {
+    path: "nxn",
+    element: <NxN />,
   }
 ];
 
