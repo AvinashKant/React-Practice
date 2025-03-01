@@ -25,7 +25,7 @@ export default function NxN() {
     ));
 
     return (
-      <table className="border-separate table-none md:table-fixed border border-gray-400">
+      <table className="w-full mt-2 table-none md:table-fixed border border-gray-400">
         <tbody>{tableRows}</tbody>
       </table>
     );

@@ -1,15 +1,27 @@
 
+import { useState } from 'react';
 export default function TrafficLight() {
+
+    const [green, setGreen] = useState(false);
+    const [yellow, setYellow] = useState(false);
+    const [red, setRed] = useState(true);
+
     function stopLight() {
-        alert("Stop");
+        setRed(true)
+        setGreen(false)
+        setYellow(false)
     }
 
     function startLight() {
-        alert("Go");
+        setRed(false)
+        setGreen(true)
+        setYellow(false)
     }
 
-    function resetLight() {
-        alert("Reset");
+    function yelloLight() {
+        setRed(false)
+        setGreen(false)
+        setYellow(true)
     }
 
 
@@ -19,27 +31,37 @@ export default function TrafficLight() {
                 <div className="text-center">
                     <h2 className="text-3xl font-extrabold text-gray-900">Traffic Light</h2>
                     <div className="flex justify-center mt-4">
-                        <div id="red" className="w-10 h-10 bg-red-500 rounded-4xl hidden"></div>
-                        <div id="yellow" className="w-10 h-10 bg-yellow-500 rounded-4xl mx-2 hidden"></div>
-                        <div id="green" className="w-10 h-10 bg-green-500 rounded-4xl hidden"></div>
+                        <div id="red" className={red ? 'w-30 h-30 bg-red-500 rounded-4xl' : 'hidden'}></div>
+                        <div id="yellow" className={yellow ? 'w-30 h-30 bg-yellow-500 rounded-4xl' : 'hidden'}></div>
+                        <div id="green" className={green ? 'w-30 h-30 bg-green-500 rounded-4xl' : 'hidden'}></div>
                     </div>
                 </div>
                 <div className="flex justify-center mt-6">
-                    <button className="h-10 bg-red-500 rounded-sm text-white p-1 mx-2" onClick={
+                    <button className="w-10 h-10 bg-red-500 rounded-sm text-white p-2 m-1" onClick={
                         () => {
                             stopLight();
                         }
                     }>
                         Stop
                     </button>
-                    <button className="w-10 h-10 bg-green-500 rounded-sm text-white p-1 mx-2" onClick={
+
+                    <button className="w-10 h-10 bg-yellow-500 rounded-sm text-white m-1" onClick={
+                        () => {
+                            yelloLight();
+                        }
+                    }>
+                        Hold
+                    </button>
+                    <button className="w-10 h-10 bg-green-500 rounded-sm text-white m-1" onClick={
                         () => {
                             startLight();
                         }
                     }>
-                        Start
+                        Go
                     </button>
-                    <button className="w-10 h-10 bg-gray-500 rounded-sm text-white p-1 mx-2" onClick={
+                </div>
+                <div className="flex justify-center mt-6">
+                    <button className="w-30 h-10 bg-black rounded-sm text-white m-1" onClick={
                         () => {
                             resetLight();
                         }
