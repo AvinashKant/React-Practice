@@ -23,6 +23,11 @@ export default function TrafficLight() {
         setGreen(false)
         setYellow(true)
     }
+    function resetLight() {
+        setRed(true)
+        setGreen(false)
+        setYellow(false)
+    }
 
 
     return (
