@@ -1,5 +1,5 @@
 
-export default function Registration() {
+export default function DynamicCounter() {
   
   return (
     <>
