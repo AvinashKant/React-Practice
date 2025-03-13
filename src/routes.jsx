@@ -8,7 +8,7 @@ import ErrorPage from "./components/Error/ErrorPage";
 import Login from "./pages/Login";
 import TrafficLight from "./pages/TrafficLight";
 import NxN from "./pages/NxN";
-import DynamicCounter from "./pages/DynamicCounter";
+import DynamicCounterPage from "./pages/DynamicCounterPage";
 import ForgetPassword from "./pages/ForgetPassword";
 
 /**
@@ -23,7 +23,7 @@ const publicRoutes = [
   },
   {
     path: "dynamic-counter",
-    element: <DynamicCounter />,
+    element: <DynamicCounterPage />,
   },
   {
     path: "forget-password",
