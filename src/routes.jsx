@@ -49,16 +49,16 @@ protectedRoutes = protectedRoutes.map((route) => {
 });
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      errorElement: <ErrorPage />,
-      children: [
-        
-        ...protectedRoutes,
-      ],
-    },
-    ...publicRoutes,
-  ]);
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+
+      ...protectedRoutes,
+    ],
+  },
+  ...publicRoutes,
+]);
 
 export default router;
