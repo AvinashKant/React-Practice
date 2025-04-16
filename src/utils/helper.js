@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
+import useEventListener from "../useEventListener/useEventListener"
 
 export default function useArray(defaultValue) {
     const [array, setArray] = useState(defaultValue)
@@ -52,4 +53,13 @@ export default function useAsync(callback, dependencies = []) {
     }, [callbackMemoized])
 
     return { loading, error, value }
+}
+
+
+
+export default function useClickOutside(ref, cb) {
+    useEventListener("click", e => {
+        if (ref.current == null || ref.current.contains(e.target)) return
+        cb(e)
+    }, document)
 }
