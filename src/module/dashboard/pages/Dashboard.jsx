@@ -50,31 +50,31 @@ export default function Dashboard() {
 
   const updatedStats = summary?.summary
     ? stats.map((item) => {
-        let stat = '$0';
-        let change = 'N/A';
-        let changeType = 'neutral';
-        let icon = item.icon;
+      let stat = '$0';
+      let change = 'N/A';
+      let changeType = 'neutral';
+      let icon = item.icon;
 
-        if (item.name === 'Stock' && summary.summary?.equity) {
-          stat = `$${summary.summary.equity.amount ?? 0}`;
-          change = summary.summary?.equity.change ?? 'N/A';
-          changeType = summary.summary?.equity.change?.startsWith('+') ? 'increase' : 'decrease';
-        }
+      if (item.name === 'Stock' && summary.summary?.equity) {
+        stat = `$${summary.summary.equity.amount ?? 0}`;
+        change = summary.summary?.equity.change ?? 'N/A';
+        changeType = summary.summary?.equity.change?.startsWith('+') ? 'increase' : 'decrease';
+      }
 
-        if (item.name === 'Mutual fund' && summary.summary.mutual_fund) {
-          stat = `$${summary.summary.mutual_fund.amount ?? 0}`;
-          change = summary.summary.mutual_fund.change ?? 'N/A';
-          changeType = summary.summary.mutual_fund.change?.startsWith('+') ? 'increase' : 'decrease';
-        }
+      if (item.name === 'Mutual fund' && summary.summary.mutual_fund) {
+        stat = `$${summary.summary.mutual_fund.amount ?? 0}`;
+        change = summary.summary.mutual_fund.change ?? 'N/A';
+        changeType = summary.summary.mutual_fund.change?.startsWith('+') ? 'increase' : 'decrease';
+      }
 
-        if (item.name === 'Bank' && summary.summary.bank) {
-          stat = `$${summary.summary.bank.amount ?? 0}`;
-          change = summary.summary.bank.change ?? 'N/A';
-          changeType = summary.summary.bank.change ? (summary.summary.bank.change.startsWith('+') ? 'increase' : 'decrease') : 'neutral';
-        }
+      if (item.name === 'Bank' && summary.summary.bank) {
+        stat = `$${summary.summary.bank.amount ?? 0}`;
+        change = summary.summary.bank.change ?? 'N/A';
+        changeType = summary.summary.bank.change ? (summary.summary.bank.change.startsWith('+') ? 'increase' : 'decrease') : 'neutral';
+      }
 
-        return { ...item, stat, change, changeType, icon };
-      })
+      return { ...item, stat, change, changeType, icon };
+    })
     : stats;
   if (isLoaderOn) {
     return (
@@ -123,7 +123,7 @@ export default function Dashboard() {
         ))}
       </dl>
       <div>
-        <BarChart/>
+        <BarChart />
       </div>
       <div>
         {transaction?.length > 0 && <Transaction setType={setType} type={type} transaction={transaction} />}
