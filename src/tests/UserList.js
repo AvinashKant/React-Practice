@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export default function UserList() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/users')
-      .then(res => res.json())
-      .then(data => {
+    fetch("/api/users")
+      .then((res) => res.json())
+      .then((data) => {
         setUsers(data);
         setLoading(false);
       });
@@ -17,7 +17,9 @@ export default function UserList() {
 
   return (
     <ul>
-      {users.map(user => <li key={user.id}>{user.name}</li>)}
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
     </ul>
   );
 }

@@ -1,15 +1,15 @@
 import {
-    GET_SUMMARY,
-    GET_SUMMARY_SUCCESS,
-    GET_SUMMARY_FAIL,
-    GET_TRANSACTIONS,
-    GET_TRANSACTIONS_SUCCESS,
-    GET_TRANSACTIONS_FAIL,
-    GET_CHART,
-    GET_CHART_SUCCESS,
-    GET_CHART_FAIL
-  } from "./constant";
-  
+  GET_SUMMARY,
+  GET_SUMMARY_SUCCESS,
+  GET_SUMMARY_FAIL,
+  GET_TRANSACTIONS,
+  GET_TRANSACTIONS_SUCCESS,
+  GET_TRANSACTIONS_FAIL,
+  GET_CHART,
+  GET_CHART_SUCCESS,
+  GET_CHART_FAIL,
+} from "./constant";
+
 export const getSummary = () => ({
   type: GET_SUMMARY,
 });
@@ -50,5 +50,5 @@ export const getChartSuccess = (chartData) => ({
 
 export const getChartError = (error) => ({
   type: GET_CHART_FAIL,
-  payload: error, 
+  payload: error,
 });

@@ -1,20 +1,25 @@
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Transaction({ setType, type, transaction }) {
   const handleTypeChange = (event) => {
     setType(Number(event.target.value));
-  }
+  };
   return (
     <div className="w-full rounded-lg bg-white p-5 mt-4 shadow sm:px-6 sm:pt-6 px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-base font-semibold text-gray-900">Transaction History</h1>
+          <h1 className="text-base font-semibold text-gray-900">
+            Transaction History
+          </h1>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
           <div className="mb-4 w-44">
-            <label htmlFor="year-select" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="year-select"
+              className="block text-sm font-medium text-gray-700"
+            >
               Select Type
             </label>
             <select
@@ -67,45 +72,52 @@ export default function Transaction({ setType, type, transaction }) {
                   <tr key={transaction.id}>
                     <td
                       className={classNames(
-                        transactionIdx !== transaction.length - 1 ? 'border-b border-gray-200' : '',
-                        'whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8',
+                        transactionIdx !== transaction.length - 1
+                          ? "border-b border-gray-200"
+                          : "",
+                        "whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8",
                       )}
                     >
                       {transaction?.remark}
                     </td>
                     <td
                       className={classNames(
-                        transactionIdx !== transaction.length - 1 ? 'border-b border-gray-200' : '',
-                        'hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 sm:table-cell',
+                        transactionIdx !== transaction.length - 1
+                          ? "border-b border-gray-200"
+                          : "",
+                        "hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 sm:table-cell",
                       )}
                     >
-                      {
-                        transaction?.amount > 0 ? <>
+                      {transaction?.amount > 0 ? (
+                        <>
                           <span className="inline-flex items-center rounded-md bg-green-500/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-500/20">
                             {transaction?.amount}
                           </span>
-                        </> :
-                          <>
-                            <span className="inline-flex items-center rounded-md bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">
-                              {transaction?.amount}
-                            </span>
-                          </>
-                      }
-
-
+                        </>
+                      ) : (
+                        <>
+                          <span className="inline-flex items-center rounded-md bg-red-400/10 px-2 py-1 text-xs font-medium text-red-400 ring-1 ring-inset ring-red-400/20">
+                            {transaction?.amount}
+                          </span>
+                        </>
+                      )}
                     </td>
                     <td
                       className={classNames(
-                        transactionIdx !== transaction.length - 1 ? 'border-b border-gray-200' : '',
-                        'hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell',
+                        transactionIdx !== transaction.length - 1
+                          ? "border-b border-gray-200"
+                          : "",
+                        "hidden whitespace-nowrap px-3 py-4 text-sm text-gray-500 lg:table-cell",
                       )}
                     >
                       {transaction.created_at}
                     </td>
                     <td
                       className={classNames(
-                        transactionIdx !== transaction.length - 1 ? 'border-b border-gray-200' : '',
-                        'whitespace-nowrap px-3 py-4 text-sm text-gray-500',
+                        transactionIdx !== transaction.length - 1
+                          ? "border-b border-gray-200"
+                          : "",
+                        "whitespace-nowrap px-3 py-4 text-sm text-gray-500",
                       )}
                     >
                       {transaction.currency}
@@ -118,5 +130,5 @@ export default function Transaction({ setType, type, transaction }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

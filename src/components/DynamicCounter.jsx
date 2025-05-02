@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 function DynamicCounter() {
   const [count, setCount] = useState(0);
@@ -31,25 +31,40 @@ function DynamicCounter() {
   };
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <div style={{ textAlign: "center", padding: "20px" }}>
       <h1>Dynamic Counter</h1>
-      <p style={{ fontSize: '2em', margin: '20px 0' }}>{count}</p>
+      <p style={{ fontSize: "2em", margin: "20px 0" }}>{count}</p>
       <button
-        style={{ padding: '10px 20px', margin: '5px', backgroundColor: 'green', color: 'white' }}
+        style={{
+          padding: "10px 20px",
+          margin: "5px",
+          backgroundColor: "green",
+          color: "white",
+        }}
         onClick={handleStart}
         disabled={isRunning}
       >
         Start
       </button>
       <button
-        style={{ padding: '10px 20px', margin: '5px', backgroundColor: 'orange', color: 'white' }}
+        style={{
+          padding: "10px 20px",
+          margin: "5px",
+          backgroundColor: "orange",
+          color: "white",
+        }}
         onClick={handlePause}
         disabled={!isRunning}
       >
         Pause
       </button>
       <button
-        style={{ padding: '10px 20px', margin: '5px', backgroundColor: 'red', color: 'white' }}
+        style={{
+          padding: "10px 20px",
+          margin: "5px",
+          backgroundColor: "red",
+          color: "white",
+        }}
         onClick={handleReset}
       >
         Reset

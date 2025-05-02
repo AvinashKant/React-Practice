@@ -1,16 +1,16 @@
-import axios from 'axios';
+import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: 'https://wealthexpress.onrender.com/',
+  baseURL: "https://wealthexpress.onrender.com/",
   timeout: 10000,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('auth_token');
+    const token = localStorage.getItem("auth_token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -18,7 +18,7 @@ axiosInstance.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 axiosInstance.interceptors.response.use(
@@ -30,24 +30,30 @@ axiosInstance.interceptors.response.use(
       const statusCode = error.response.status;
       switch (statusCode) {
         case 403:
-          console.error('Forbidden: You do not have permission to access this resource.');
+          console.error(
+            "Forbidden: You do not have permission to access this resource.",
+          );
           break;
         case 404:
-          console.error('Not Found: The requested resource could not be found.');
+          console.error(
+            "Not Found: The requested resource could not be found.",
+          );
           break;
         case 500:
-          console.error('Server Error: Something went wrong.');
+          console.error("Server Error: Something went wrong.");
           break;
         default:
-          console.error(`Error: ${error.response.status} - ${error.response.statusText}`);
+          console.error(
+            `Error: ${error.response.status} - ${error.response.statusText}`,
+          );
       }
     } else if (error.request) {
-      console.error('Network Error: No response from server.');
+      console.error("Network Error: No response from server.");
     } else {
-      console.error('Request Error:', error.message);
+      console.error("Request Error:", error.message);
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

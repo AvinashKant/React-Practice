@@ -10,7 +10,8 @@ import TrafficLight from "./pages/TrafficLight";
 import NxN from "./pages/NxN";
 import DynamicCounterPage from "./pages/DynamicCounterPage";
 import ForgetPassword from "./pages/ForgetPassword";
-import Learn1 from "./pages/Learn1"
+import Learn1 from "./pages/Learn1";
+import Otp from "./pages/Otp";
 
 /**
  * Protected Routes
@@ -25,10 +26,11 @@ const publicRoutes = [
   {
     path: "learn1",
     element: <Learn1 />,
-  }
+  },
 ];
 
-let protectedRoutes = [...DashboardRoute.children,
+let protectedRoutes = [
+  ...DashboardRoute.children,
   {
     path: "dynamic-counter",
     element: <DynamicCounterPage />,
@@ -44,7 +46,12 @@ let protectedRoutes = [...DashboardRoute.children,
   {
     path: "nxn",
     element: <NxN />,
-  }];
+  },
+  {
+    path: "otp-box",
+    element: <Otp />,
+  },
+];
 
 protectedRoutes = protectedRoutes.map((route) => {
   return {
@@ -58,9 +65,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
-    children: [
-      ...protectedRoutes,
-    ],
+    children: [...protectedRoutes],
   },
   ...publicRoutes,
 ]);

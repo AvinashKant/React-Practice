@@ -17,7 +17,7 @@ class dashboardService {
     return await axiosInstance
       .get(`v1/transactions?type=${type}&page=1&limit=10`)
       .then((response) => {
-        const transactionsData = response.data
+        const transactionsData = response.data;
         return transactionsData;
       })
       .catch((error) => {
@@ -29,14 +29,13 @@ class dashboardService {
     return await axiosInstance
       .get("v1/chart?year=2025")
       .then((response) => {
-        const chartData = response.data
+        const chartData = response.data;
         return chartData;
       })
       .catch((error) => {
         throw error;
       });
   }
-
 }
 
 const DashboardServiceInstance = new dashboardService();

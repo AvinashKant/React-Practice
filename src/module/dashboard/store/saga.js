@@ -1,17 +1,13 @@
 import { takeEvery, call, put } from "redux-saga/effects";
 
+import { GET_CHART, GET_SUMMARY, GET_TRANSACTIONS } from "./constant";
 import {
-  GET_CHART,
-  GET_SUMMARY,
-  GET_TRANSACTIONS,
-} from "./constant";
-import {
-    getSummarySuccess,
-    getSummaryError,
-    getTransactionsSuccess,
-    getTransactionsError,
-    getChartSuccess,
-    getChartError,
+  getSummarySuccess,
+  getSummaryError,
+  getTransactionsSuccess,
+  getTransactionsError,
+  getChartSuccess,
+  getChartError,
 } from "./action";
 
 import dashboardSerObj from "../service/dashboardService";
@@ -36,7 +32,10 @@ function* doFetchSummary() {
 
 function* doFetchTransaction(action) {
   try {
-    const fetchResponse = yield call(dashboardSerObj.fetchTranstion, action.value);
+    const fetchResponse = yield call(
+      dashboardSerObj.fetchTranstion,
+      action.value,
+    );
     yield put(getTransactionsSuccess(fetchResponse.data));
   } catch (error) {
     yield put(getTransactionsError(error.response.data));
