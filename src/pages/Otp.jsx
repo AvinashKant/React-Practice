@@ -4,9 +4,7 @@ import OTPBox from "../components/OTPBox";
 export default function Otp() {
   const [isOtpOpen, setOtpOpen] = useState(false);
 
-  function OpenOtpBox() {
-    setOtpOpen(true);
-  }
+  let otpBox = (status) => setOtpOpen(status);
 
   return (
     <>
@@ -18,9 +16,15 @@ export default function Otp() {
           <li>123</li>
         </ol>
       </div>
-      <button onClick={OpenOtpBox}>Send OTP</button>
+      <button onClick={()=>otpBox(true)}>Send OTP</button>
 
-      {isOtpOpen && <OTPBox />}
+      {isOtpOpen && <OTPBox setClose={otpBox} otoSize={6}>
+        sadas
+      </OTPBox>}
+
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur consectetur iure dolor nemo voluptas quod repellendus obcaecati dolorum officia facilis assumenda, quas reiciendis doloremque tenetur nobis fugit sapiente voluptatibus.
+      </div>
     </>
   );
 }
