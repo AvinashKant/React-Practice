@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
+
+import navigation from "./menus";
 import {
   Dialog,
   DialogBackdrop,
   DialogPanel,
   TransitionChild,
 } from "@headlessui/react";
+
 import {
   BuildingLibraryIcon,
   Cog6ToothIcon,
@@ -15,25 +18,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  {
-    name: "dynamic-counter",
-    href: "dynamic-counter",
-    icon: ChartBarIcon,
-    current: false,
-  },
-  {
-    name: "traffic-light",
-    href: "traffic-light",
-    icon: BanknotesIcon,
-    current: false,
-  },
-  { name: "nxn", href: "nxn", icon: BuildingLibraryIcon, current: false },
-];
-const links = [
-  { id: 1, name: "OTP box", href: "otp-box", initial: "O", current: false },
-];
+const links = [];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -102,29 +87,6 @@ export default function SideBar() {
                     </ul>
                   </li>
                   <li>
-                    <div className="text-xs/6 font-semibold text-gray-400">
-                      All task
-                    </div>
-                    <ul role="list" className="-mx-2 mt-2 space-y-1">
-                      {links.map((team) => (
-                        <li key={team.name}>
-                          <NavLink
-                            to={team.href}
-                            className={classNames(
-                              team.current
-                                ? "bg-gray-800 text-white"
-                                : "text-gray-400 hover:bg-gray-800 hover:text-white",
-                              "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold",
-                            )}
-                          >
-                            <span className="flex size-6 shrink-0 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 text-[0.625rem] font-medium text-gray-400 group-hover:text-white">
-                              {team.name}
-                            </span>
-                            <span className="truncate">{team.name}</span>
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
                   </li>
                 </ul>
               </nav>
@@ -168,38 +130,6 @@ export default function SideBar() {
                 </ul>
               </li>
               <li>
-                <div className="text-xs/6 font-semibold text-gray-400">
-                  All task
-                </div>
-                <ul role="list" className="-mx-2 mt-2 space-y-1">
-                  {links.map((team) => (
-                    <li key={team.name}>
-                      <NavLink
-                        to={team.href}
-                        className={classNames(
-                          team.current
-                            ? "bg-gray-800 text-white"
-                            : "text-gray-400 hover:bg-gray-800 hover:text-white",
-                          "group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold",
-                        )}
-                      >
-                        {team.name}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-              <li className="mt-auto">
-                <a
-                  href="#"
-                  className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white"
-                >
-                  <Cog6ToothIcon
-                    aria-hidden="true"
-                    className="size-6 shrink-0"
-                  />
-                  Settings
-                </a>
               </li>
             </ul>
           </nav>
