@@ -12,11 +12,13 @@ import DynamicCounterPage from "./pages/DynamicCounterPage";
 import ForgetPassword from "./pages/ForgetPassword";
 import Learn1 from "./pages/Learn1";
 import Otp from "./pages/Otp";
+import MouseMoment from "./pages/MouseMoment";
 
 /**
  * Protected Routes
  */
 import DashboardRoute from "../src/module/dashboard/pages/routes";
+import ToDo from "./pages/Todo";
 
 const publicRoutes = [
   {
@@ -50,6 +52,14 @@ let protectedRoutes = [
   {
     path: "otp-box",
     element: <Otp />,
+  },
+  {
+    path: "to-do",
+    element: <ToDo />,
+  },
+  {
+    path: "mouse-moment",
+    element: <MouseMoment />,
   },
 ];
 

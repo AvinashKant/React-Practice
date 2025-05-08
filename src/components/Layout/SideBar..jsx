@@ -86,8 +86,7 @@ export default function SideBar() {
                       ))}
                     </ul>
                   </li>
-                  <li>
-                  </li>
+                  <li></li>
                 </ul>
               </nav>
             </div>
@@ -129,8 +128,7 @@ export default function SideBar() {
                   ))}
                 </ul>
               </li>
-              <li>
-              </li>
+              <li></li>
             </ul>
           </nav>
         </div>

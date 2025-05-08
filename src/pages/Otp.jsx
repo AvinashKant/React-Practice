@@ -8,22 +8,32 @@ export default function Otp() {
 
   return (
     <>
-      <div className="group">
+      {/* <div className="group">
         <div className="bg-blue-50">Alphabet</div>
         <ol className="invisible group-hover:visible bg-blue-100 pl-1">
           <li>ABC</li>
           <li>XYZ</li>
           <li>123</li>
         </ol>
-      </div>
-      <button onClick={()=>otpBox(true)}>Send OTP</button>
+      </div> */}
+      <button
+        className="bg-green-500 text-white p-1"
+        onClick={() => otpBox(true)}
+      >
+        Send OTP
+      </button>
 
-      {isOtpOpen && <OTPBox setClose={otpBox} otoSize={6}>
-        sadas
-      </OTPBox>}
+      {isOtpOpen && (
+        <OTPBox setClose={otpBox} otoSize={6}>
+          sadas
+        </OTPBox>
+      )}
 
       <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur consectetur iure dolor nemo voluptas quod repellendus obcaecati dolorum officia facilis assumenda, quas reiciendis doloremque tenetur nobis fugit sapiente voluptatibus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea consequatur
+        consectetur iure dolor nemo voluptas quod repellendus obcaecati dolorum
+        officia facilis assumenda, quas reiciendis doloremque tenetur nobis
+        fugit sapiente voluptatibus.
       </div>
     </>
   );
