@@ -13,6 +13,8 @@ import ForgetPassword from "./pages/ForgetPassword";
 import Learn1 from "./pages/Learn1";
 import Otp from "./pages/Otp";
 import MouseMoment from "./pages/MouseMoment";
+import UserList from "./pages/UserList";
+import ChipsInputPage from "./pages/ChipsInputPage";
 
 /**
  * Protected Routes
@@ -60,6 +62,14 @@ let protectedRoutes = [
   {
     path: "mouse-moment",
     element: <MouseMoment />,
+  },
+  {
+    path: "user-list",
+    element: <UserList />,
+  },
+  {
+    path: "chips-input",
+    element: <ChipsInputPage />,
   },
 ];
 

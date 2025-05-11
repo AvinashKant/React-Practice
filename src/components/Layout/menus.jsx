@@ -32,6 +32,18 @@ export default [
   {
     name: "Mouse",
     href: "mouse-moment",
+    icon: Cog6ToothIcon,
+    current: false,
+  },
+  {
+    name: "UserList",
+    href: "user-list",
+    icon: ChartBarIcon,
+    current: false,
+  },
+  {
+    name: "chips-input",
+    href: "chips-input",
     icon: BuildingLibraryIcon,
     current: false,
   },
