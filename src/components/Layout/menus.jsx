@@ -47,4 +47,10 @@ export default [
     icon: BuildingLibraryIcon,
     current: false,
   },
+  {
+    name: "toast",
+    href: "toast",
+    icon: ChartBarIcon,
+    current: false,
+  }
 ];

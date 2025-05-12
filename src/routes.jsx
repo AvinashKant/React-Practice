@@ -15,6 +15,7 @@ import Otp from "./pages/Otp";
 import MouseMoment from "./pages/MouseMoment";
 import UserList from "./pages/UserList";
 import ChipsInputPage from "./pages/ChipsInputPage";
+import Toast from "./pages/Toast";
 
 /**
  * Protected Routes
@@ -71,6 +72,10 @@ let protectedRoutes = [
     path: "chips-input",
     element: <ChipsInputPage />,
   },
+  {
+    path: "toast",
+    element: <Toast />,
+  }
 ];
 
 protectedRoutes = protectedRoutes.map((route) => {
