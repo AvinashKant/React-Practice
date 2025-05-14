@@ -75,7 +75,7 @@ let protectedRoutes = [
   {
     path: "toast",
     element: <Toast />,
-  }
+  },
 ];
 
 protectedRoutes = protectedRoutes.map((route) => {

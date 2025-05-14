@@ -52,5 +52,5 @@ export default [
     href: "toast",
     icon: ChartBarIcon,
     current: false,
-  }
+  },
 ];
