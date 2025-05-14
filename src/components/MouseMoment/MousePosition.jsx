@@ -1,4 +1,4 @@
-export default function MouseMove({ xPosition, YPosition }) {
+export default function MousePosition({ xPosition, YPosition }) {
   return (
     <>
       <div

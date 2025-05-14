@@ -30,27 +30,33 @@ export default [
   },
   { name: "TODO", href: "to-do", icon: BuildingLibraryIcon, current: false },
   {
-    name: "Mouse",
-    href: "mouse-moment",
+    name: "Mouse hover pointer",
+    href: "mouse-hover-pointer",
     icon: Cog6ToothIcon,
     current: false,
   },
   {
-    name: "UserList",
+    name: "User List",
     href: "user-list",
     icon: ChartBarIcon,
     current: false,
   },
   {
-    name: "chips-input",
+    name: "Chips input",
     href: "chips-input",
     icon: BuildingLibraryIcon,
     current: false,
   },
   {
-    name: "toast",
+    name: "Toast",
     href: "toast",
     icon: ChartBarIcon,
     current: false,
   },
+  {
+    name: "Mouse Position",
+    href: "mouse-position",
+    icon: ChartBarIcon,
+    current: false,
+  }
 ];

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import MouseMove from "../components/MouseMove";
+import MousePosition from "../components/MouseMoment/MousePosition";
 
-export default function MouseMoment() {
+export default function MouseHoverPointer() {
   const options = {
     o: [],
     A: [
@@ -24,17 +24,17 @@ export default function MouseMoment() {
   const select2Ref = useRef(null);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMousePosition = (event) => {
       const id = setTimeout(() => {
         setXPosition(event.clientX);
         setYPosition(event.clientY);
       }, 100);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMousePosition);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMousePosition);
       clearInterval(id);
     };
   }, []);
@@ -48,7 +48,7 @@ export default function MouseMoment() {
   return (
     <>
       <h1>Add mouse pointer</h1>
-      <MouseMove xPosition={xPosition} YPosition={YPosition} />
+      <MousePosition xPosition={xPosition} YPosition={YPosition} />
 
       <div className="bg-yellow-50">
         <select name="" id="" ref={select1Ref} onChange={selectBox2}>

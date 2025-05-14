@@ -12,10 +12,11 @@ import DynamicCounterPage from "./pages/DynamicCounterPage";
 import ForgetPassword from "./pages/ForgetPassword";
 import Learn1 from "./pages/Learn1";
 import Otp from "./pages/Otp";
-import MouseMoment from "./pages/MouseMoment";
+import MouseHoverPointer from "./pages/MouseHoverPointer";
 import UserList from "./pages/UserList";
 import ChipsInputPage from "./pages/ChipsInputPage";
 import Toast from "./pages/Toast";
+import MousePosition from "./pages/MousePosition";
 
 /**
  * Protected Routes
@@ -61,8 +62,8 @@ let protectedRoutes = [
     element: <ToDo />,
   },
   {
-    path: "mouse-moment",
-    element: <MouseMoment />,
+    path: "mouse-hover-pointer",
+    element: <MouseHoverPointer/>,
   },
   {
     path: "user-list",
@@ -76,6 +77,10 @@ let protectedRoutes = [
     path: "toast",
     element: <Toast />,
   },
+  {
+    path: "mouse-position",
+    element: <MousePosition />,
+  }
 ];
 
 protectedRoutes = protectedRoutes.map((route) => {
