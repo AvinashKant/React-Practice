@@ -11,8 +11,6 @@ export default function ToDo() {
       return item.id != index;
     });
     setTodo(newTodo);
-
-    console.log(newTodo);
   }
 
   async function submitText(event) {
@@ -37,41 +35,44 @@ export default function ToDo() {
 
   return (
     <>
-      <div className="h-full">
+      <div className="">
         <div className="px-4 sm:px-6 lg:px-8 bg-[#E5E5E5]">
-          <h1 className="text-center">TODO LIST</h1>
-          <div className="w-full m-2">
-            <div className="w-[80%] flex justify-between">
+          <div className="flex">
+            <div className="w-[100%]">
               <input
                 type="text"
                 onKeyUp={submitText}
                 placeholder="Enter todo"
-                className="p-2 m-2 border-purple-900"
+                className="border-color-[#6c63ff] p-1"
               />
-              <div>Dropdowm</div>
-              <div>dark part</div>
             </div>
+            <div className="w-[80%]">
+              drop
+            </div>
+            <div className="w-[20%]">
+              dark theme
+            </div>
+          </div>
 
-            <div className="mx-auto justify-center max-h-96 overflow-y-auto">
-              {todo.map((todo, index) => {
-                return (
-                  <div
-                    className="flex justify-between items-center m-1 p-1"
-                    key={index}
-                  >
-                    <div>
-                      <input type="checkbox" name="" id="" />
-                    </div>
-                    <div className="justify-center">{todo.text}</div>
-                    <div className="bg-red-600 text-white p-1 rounded-b-sm">
-                      <button onClick={() => deleteTodo(todo.id)}>
-                        Delete
-                      </button>
-                    </div>
+          <div className="mx-auto justify-center max-h-96 overflow-y-auto">
+            {todo.map((todo, index) => {
+              return (
+                <div
+                  className="flex justify-between items-center m-1 p-1"
+                  key={index}
+                >
+                  <div>
+                    <input type="checkbox" name="" id="" className="" />
                   </div>
-                );
-              })}
-            </div>
+                  <div className="justify-center">{todo.text}</div>
+                  <div className="bg-red-600 text-white p-1 rounded-b-sm">
+                    <button onClick={() => deleteTodo(todo.id)}>
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

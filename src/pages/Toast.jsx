@@ -3,7 +3,6 @@ import { ToastProvider, toast } from "../components/Toast/ToastProvider";
 export default function Toast() {
   return (
     <div className="App">
-      <ToastProvider />
       <button
         onClick={() => toast.success("Success Toast!")}
         className="bg-green-800 m-1"

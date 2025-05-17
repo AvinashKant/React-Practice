@@ -56,6 +56,12 @@ export default [
   {
     name: "Mouse Position",
     href: "mouse-position",
+    icon: BuildingLibraryIcon,
+    current: false,
+  },
+  {
+    name: "Event source",
+    href: "event-source",
     icon: ChartBarIcon,
     current: false,
   }

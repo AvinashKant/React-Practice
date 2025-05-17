@@ -17,6 +17,7 @@ import UserList from "./pages/UserList";
 import ChipsInputPage from "./pages/ChipsInputPage";
 import Toast from "./pages/Toast";
 import MousePosition from "./pages/MousePosition";
+import EventSource from "./pages/EventSource";
 
 /**
  * Protected Routes
@@ -80,6 +81,10 @@ let protectedRoutes = [
   {
     path: "mouse-position",
     element: <MousePosition />,
+  },
+  {
+    path: "event-source",
+    element: <EventSource />,
   }
 ];
 
