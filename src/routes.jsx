@@ -18,6 +18,7 @@ import ChipsInputPage from "./pages/ChipsInputPage";
 import Toast from "./pages/Toast";
 import MousePosition from "./pages/MousePosition";
 import EventSource from "./pages/EventSource";
+import ToDoUsereducer from "./pages/ToDoUsereducer";
 
 /**
  * Protected Routes
@@ -85,6 +86,10 @@ let protectedRoutes = [
   {
     path: "event-source",
     element: <EventSource />,
+  },
+  {
+    path: "to-do-usereducer",
+    element: <ToDoUsereducer />,
   }
 ];
 

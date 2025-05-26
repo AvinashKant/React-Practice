@@ -25,10 +25,21 @@ export default [
   {
     name: "OTP box",
     href: "otp-box",
-    icon: BuildingLibraryIcon,
+    icon: ChartBarIcon,
     current: false,
   },
-  { name: "TODO", href: "to-do", icon: BuildingLibraryIcon, current: false },
+  {
+    name: "To-do",
+    href: "to-do",
+    icon: Cog6ToothIcon,
+    current: false
+  },
+  {
+    name: "To-do useReducer",
+    href: "to-do-usereducer",
+    icon: BuildingLibraryIcon,
+    current: false
+  },
   {
     name: "Mouse hover pointer",
     href: "mouse-hover-pointer",
