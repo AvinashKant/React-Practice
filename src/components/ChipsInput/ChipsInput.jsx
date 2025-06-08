@@ -5,18 +5,18 @@ export default function ChipsInput() {
   const [chips, setChips] = useState([]);
 
   async function submitText(event) {
-    if (event.key === "Enter" && event.target.value.trim() !== '') {
-        await setChips((prev) => {
-          return [
-            ...prev,
-            {
-              id: chips.length + 1,
-              text: event.target.value,
-            },
-          ];
-        });
+    if (event.key === "Enter" && event.target.value.trim() !== "") {
+      await setChips((prev) => {
+        return [
+          ...prev,
+          {
+            id: chips.length + 1,
+            text: event.target.value,
+          },
+        ];
+      });
 
-        event.target.value = null;
+      event.target.value = null;
     }
   }
 
@@ -46,8 +46,12 @@ export default function ChipsInput() {
                   className="flex items-center m-1 rounded-2xl bg-yellow-400 p-1"
                 >
                   {ele.text}{" "}
-                  <button onClick={() => removeChip(ele.id)} className="bg-transparent border-none ml-2 cursor-pointer text-red-800" >X</button>
-
+                  <button
+                    onClick={() => removeChip(ele.id)}
+                    className="bg-transparent border-none ml-2 cursor-pointer text-red-800"
+                  >
+                    X
+                  </button>
                 </div>
               </>
             );

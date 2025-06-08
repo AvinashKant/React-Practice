@@ -32,13 +32,13 @@ export default [
     name: "To-do",
     href: "to-do",
     icon: Cog6ToothIcon,
-    current: false
+    current: false,
   },
   {
     name: "To-do useReducer",
     href: "to-do-usereducer",
     icon: BuildingLibraryIcon,
-    current: false
+    current: false,
   },
   {
     name: "Mouse hover pointer",
@@ -75,5 +75,5 @@ export default [
     href: "event-source",
     icon: ChartBarIcon,
     current: false,
-  }
+  },
 ];

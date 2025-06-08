@@ -46,12 +46,8 @@ export default function ToDo() {
                 className="border-color-[#6c63ff] p-1"
               />
             </div>
-            <div className="w-[80%]">
-              drop
-            </div>
-            <div className="w-[20%]">
-              dark theme
-            </div>
+            <div className="w-[80%]">drop</div>
+            <div className="w-[20%]">dark theme</div>
           </div>
 
           <div className="mx-auto justify-center max-h-96 overflow-y-auto">
@@ -66,9 +62,7 @@ export default function ToDo() {
                   </div>
                   <div className="justify-center">{todo.text}</div>
                   <div className="bg-red-600 text-white p-1 rounded-b-sm">
-                    <button onClick={() => deleteTodo(todo.id)}>
-                      Delete
-                    </button>
+                    <button onClick={() => deleteTodo(todo.id)}>Delete</button>
                   </div>
                 </div>
               );

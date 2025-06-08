@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-
-
 export default function MousePosition() {
-
   const [points, setPoints] = useState([]);
   const [queue, setQueue] = useState([]);
   const handleClick = (e) => {
@@ -63,5 +60,4 @@ export default function MousePosition() {
       ))}
     </div>
   );
-
 }

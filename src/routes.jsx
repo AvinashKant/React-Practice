@@ -65,7 +65,7 @@ let protectedRoutes = [
   },
   {
     path: "mouse-hover-pointer",
-    element: <MouseHoverPointer/>,
+    element: <MouseHoverPointer />,
   },
   {
     path: "user-list",
@@ -90,7 +90,7 @@ let protectedRoutes = [
   {
     path: "to-do-usereducer",
     element: <ToDoUsereducer />,
-  }
+  },
 ];
 
 protectedRoutes = protectedRoutes.map((route) => {
