@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import ComponentCss from '../components/ModuleCss/ComponentCss'
+import ComponentCss from "../components/ModuleCss/ComponentCss";
 
 export default function NxN() {
   const [row, setRow] = useState(0);
@@ -57,7 +57,7 @@ export default function NxN() {
         </div>
       </div>
       <div className="mt-5 border-t-2 border-gray-200">{grid}</div>
-      <ComponentCss/>
+      <ComponentCss />
     </>
   );
 }
