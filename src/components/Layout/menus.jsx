@@ -76,4 +76,10 @@ export default [
     icon: ChartBarIcon,
     current: false,
   },
+  {
+    name: "Model",
+    href: "modelCss",
+    icon: ChartBarIcon,
+    current: false,
+  },
 ];

@@ -19,12 +19,14 @@ import Toast from "./pages/Toast";
 import MousePosition from "./pages/MousePosition";
 import EventSource from "./pages/EventSource";
 import ToDoUsereducer from "./pages/ToDoUsereducer";
+import ModelCss from "./pages/ModelCss";
 
 /**
  * Protected Routes
  */
 import DashboardRoute from "../src/module/dashboard/pages/routes";
 import ToDo from "./pages/Todo";
+import { elements } from "chart.js";
 
 const publicRoutes = [
   {
@@ -91,6 +93,10 @@ let protectedRoutes = [
     path: "to-do-usereducer",
     element: <ToDoUsereducer />,
   },
+  {
+    path:"modelCss",
+    element:<ModelCss/>
+  }
 ];
 
 protectedRoutes = protectedRoutes.map((route) => {
