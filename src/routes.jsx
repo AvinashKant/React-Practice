@@ -20,6 +20,7 @@ import MousePosition from "./pages/MousePosition";
 import EventSource from "./pages/EventSource";
 import ToDoUsereducer from "./pages/ToDoUsereducer";
 import ModelCss from "./pages/ModelCss";
+import SidebarToggle from "./pages/SidebarToggle";
 
 /**
  * Protected Routes
@@ -96,6 +97,10 @@ let protectedRoutes = [
   {
     path:"modelCss",
     element:<ModelCss/>
+  },
+  {
+    path:"sidebar-toggle",
+    element:<SidebarToggle/>
   }
 ];
 

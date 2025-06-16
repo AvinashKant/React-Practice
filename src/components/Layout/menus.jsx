@@ -79,6 +79,12 @@ export default [
   {
     name: "Model",
     href: "modelCss",
+    icon: BuildingLibraryIcon,
+    current: false,
+  },
+  {
+    name: "SidebarToggle",
+    href: "sidebar-toggle",
     icon: ChartBarIcon,
     current: false,
   },

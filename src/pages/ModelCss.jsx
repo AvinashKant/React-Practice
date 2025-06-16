@@ -1,7 +1,7 @@
 export default function ModelCss() {
     return (
         <>
-            <div className="flex flex-col items-center border p-2 max-w-[300px] absolute justify-center items-center">
+            <div className="flex flex-col items-center border p-2 max-w-[300px] absolute justify-center">
                 <div>
                     <div>
                         <img src="" alt="" />
