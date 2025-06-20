@@ -21,6 +21,7 @@ import EventSource from "./pages/EventSource";
 import ToDoUsereducer from "./pages/ToDoUsereducer";
 import ModelCss from "./pages/ModelCss";
 import SidebarToggle from "./pages/SidebarToggle";
+import ProgressBar from "./pages/ProgressBar";
 
 /**
  * Protected Routes
@@ -101,6 +102,10 @@ let protectedRoutes = [
   {
     path:"sidebar-toggle",
     element:<SidebarToggle/>
+  },
+  {
+    path:"progress-bar",
+    element:<ProgressBar/>
   }
 ];
 
